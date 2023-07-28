@@ -1,0 +1,29 @@
+
+@server = https://christhemar03-redesigned-cod-5xvqjv6xj64f4xg9-8080.preview.app.github.dev
+@api = {{server}}/api/ec3
+
+################ Categorias: ################
+###
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Cuerda"}
+
+################ Instrumentos: ################
+###
+GET {{api}}/instrumentos
+###
+GET https://christhemar03-redesigned-cod-5xvqjv6xj64f4xg9-8080.preview.app.github.dev/categorias/1
+
+###
+POST {{api}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "https://christhemar03-redesigned-cod-5xvqjv6xj64f4xg9-8080.preview.app.github.dev/categorias/1"}
+
+###
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
